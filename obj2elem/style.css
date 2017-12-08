@@ -1,0 +1,101 @@
+body {
+    padding-left: 100px;
+    background-color: #dbdbdb;
+}
+.obj2elem-div {
+    padding: 2px 20px;
+}
+/*.border-left-show {*/
+/*border-left: solid 3px teal;*/
+/*margin-bottom: 8px;*/
+/*margin-top: 8px;*/
+/*}*/
+/*.border-left-show:hover {*/
+/*border-left: solid 4px #f66;*/
+/*background-color: #d4d4d4;*/
+/*}*/
+.hidden-nodes {
+    display: none;
+}
+.control-panel {
+    opacity: 0;
+}
+.control-panel:hover {
+    opacity: 1;
+}
+.fa-plus {
+    color: forestgreen;
+}
+.fa-times {
+    color: red;
+}
+.terminus-value {
+    /*display: block;*/
+    margin-left: 20px;
+    background-color: transparent;
+    border: transparent;
+    width: 12em;
+    overflow: visible;
+    line-height: 16px;
+    padding: 3px 5px;
+    color: forestgreen;
+}
+.value-modified {
+    color: #f66;
+}
+input:focus {
+    background-color: #f5e79e;
+}
+#input-panel {
+    background-color: white;
+    padding-top: 15px;
+    width: 600px;
+}
+#_name, #_value {
+    background-color: white;
+    border: 1px gainsboro solid;
+    padding: 3px 5px;
+    margin: 5px 20px 10px 10px;
+}
+.input-description {
+    display: inline-block;
+    width: 48px;
+}
+#confirm-panel {
+    margin: 15px 0;
+}
+#add-button {
+    background-color: #007edf;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#add-button:hover {
+    background-color: deepskyblue;
+}
+#cancel-button {
+    background-color: lightgray;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 6px;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+#cancel-button:hover {
+    background-color: #e7e7e7;
+}
+.new-node-created {
+    border-left: solid 4px #f66;
+    -webkit-transition: border-left 5s; /* For Safari 3.1 to 6.0 */
+    transition: border-left 5s;
+}
+
+
+/*::-webkit-input-placeholder { !* WebKit, Blink, Edge *!*/
+/*color:    forestgreen;*/
+/*}*/
