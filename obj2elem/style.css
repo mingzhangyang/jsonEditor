@@ -25,7 +25,7 @@ body {
     align-items: center;
 }
 .data-area-panel {
-    margin: 10px 20px;
+    margin: 10px 60px 10px 60px;
     border: dotted 2px whitesmoke;
 }
 #left-panel {
@@ -92,7 +92,7 @@ body {
     width: 12em;
     overflow: visible;
     line-height: 16px;
-    padding: 3px 5px;
+    padding: 1px 5px;
     color: forestgreen;
 }
 .value-modified {
@@ -155,8 +155,10 @@ textarea {
     transition: border-left 5s;
 }
 
-svg {
+#update-arrows {
+    position: fixed;
     margin-top: 300px;
+    width: 80px;
 }
 #to-right {
     fill: green;
