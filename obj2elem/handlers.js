@@ -4,7 +4,6 @@
 'use strict';
 
 // add click handler to expand-collapse-handler class
-
 function expand_collapase_handler(node) {
   node = node || document;
   let ics = node.getElementsByClassName('expand-collapse-handler');
@@ -29,10 +28,9 @@ function expand_collapase_handler(node) {
   }
 }
 
-expand_collapase_handler();
+// expand_collapase_handler();
 
 // add change handler to input elements
-
 function value_modification_handler(node) {
   node = node || document;
   let inps = node.getElementsByClassName('terminus-value');
@@ -47,10 +45,9 @@ function value_modification_handler(node) {
   }
 }
 
-value_modification_handler();
+// value_modification_handler();
 
 // add 'add' and 'remove' handler to icons
-
 function control_icon_handler(node) {
   node = node || document;
 
@@ -142,11 +139,10 @@ function control_icon_handler(node) {
   }
 }
 
-control_icon_handler();
+// control_icon_handler();
 
 
 // function for update node
-
 function updateNode(obj, node) {
   obj2elems(obj, node);
   expand_collapase_handler(node);
@@ -155,7 +151,6 @@ function updateNode(obj, node) {
 }
 
 // function for delete input-panel
-
 function delete_input_panel() {
   let p = document.getElementById('input-panel');
   if (p !== null) {
