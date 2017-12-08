@@ -10,6 +10,42 @@
     <script src="obj2elem/testJSON.js"></script>
 </head>
 <body>
+<div id="top-head-banner">
+    <span id="app-title">JSON Editor</span>
+</div>
+<div id="data-area">
+    <div id="left-panel" class="data-area-panel">
+        <div class="sub-header-banner">
+            <input type="button" value="SOURCE">
+        </div>
+        <div id="text-view" class="input-view-div">
+            <label for="plain-input-data"></label>
+            <textarea name="plain-input-data" id="plain-input-data" cols="80"
+                      rows="100"></textarea>
+        </div>
+    </div>
+
+    <div>
+        <svg width="60" height="120">
+            <g id="to-right" transform="translate(0, 15)">
+                <path
+                        d="M0 10 L 30 10 L 30 0 L 60 15 L 30 30 L 30 20 L 0 20 Z"></path>
+            </g>
+            <g id="to-left" transform="translate(0, 75)">
+                <path
+                        d="M0 15 L 30 0 L 30 10 L 60 10 L 60 20 L 30 20 L 30 30 Z"></path>
+            </g>
+        </svg>
+    </div>
+
+    <div id="right-panel" class="data-area-panel">
+        <div class="sub-header-banner">
+            <input type="button" value="VIEW">
+        </div>
+        <div id="json-editor" class="input-view-div">
+        </div>
+    </div>
+</div>
 <script src="index.js"></script>
 <script src="obj2elem/handlers.js"></script>
 </body>

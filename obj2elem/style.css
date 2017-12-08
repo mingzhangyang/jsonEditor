@@ -1,7 +1,62 @@
 body {
-    padding-left: 100px;
     background-color: #dbdbdb;
+    margin: 0;
 }
+#top-head-banner {
+    height: 60px;
+    width: 100%;
+    background-color: #00d6b2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#app-title {
+    font-size: 36px;
+    display: block;
+    margin-left: 20px;
+    color: white;
+}
+.sub-header-banner {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.data-area-panel {
+    margin: 10px 20px;
+    border: dotted 2px whitesmoke;
+}
+#left-panel {
+    width: 620px;
+}
+#right-panel {
+    min-width: 620px;
+}
+.input-view-div {
+    padding: 10px;
+}
+#left-panel .sub-header-banner {
+    background-color: #4CAF50;
+}
+#right-panel .sub-header-banner {
+    background-color: darkorange;
+}
+#data-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sub-header-banner input {
+    display: block;
+    width: 80px;
+    height: 24px;
+    border: transparent;
+    border-radius: 6px;
+    margin: auto;
+}
+
 .obj2elem-div {
     padding: 2px 20px;
 }
@@ -46,10 +101,13 @@ body {
 input:focus {
     background-color: #f5e79e;
 }
-#input-panel {
+#user-input-panel {
     background-color: white;
     padding-top: 15px;
-    width: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
 }
 #_name, #_value {
     background-color: white;
@@ -60,9 +118,10 @@ input:focus {
 .input-description {
     display: inline-block;
     width: 48px;
+    /*width: 100%;*/
 }
-#confirm-panel {
-    margin: 15px 0;
+textarea {
+    vertical-align: top;
 }
 #add-button {
     background-color: #007edf;
@@ -71,7 +130,7 @@ input:focus {
     border-radius: 6px;
     color: white;
     border: none;
-    margin-right: 20px;
+    margin: 20px;
     cursor: pointer;
 }
 #add-button:hover {
@@ -79,6 +138,7 @@ input:focus {
 }
 #cancel-button {
     background-color: lightgray;
+    margin: 20px;
     padding: 8px 15px;
     text-align: center;
     border-radius: 6px;
@@ -95,6 +155,17 @@ input:focus {
     transition: border-left 5s;
 }
 
+svg {
+    margin-top: 300px;
+}
+#to-right {
+    fill: green;
+    cursor: pointer;
+}
+#to-left {
+    fill: orange;
+    cursor: pointer;
+}
 
 /*::-webkit-input-placeholder { !* WebKit, Blink, Edge *!*/
 /*color:    forestgreen;*/

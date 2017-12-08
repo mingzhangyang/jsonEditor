@@ -53,7 +53,7 @@ function control_icon_handler(node) {
 
   let pluses = node.getElementsByClassName('fa-plus');
 
-  let insertedTemplate = '<div id="input-panel" class="obj2elem-div"><div><span class="input-description">Name:</span><input name="_name" id="_name"><span class="input-description">Value:</span><input name="_value" id="_value"></div><div id="confirm-panel"><input id="add-button" type="button" value="Add"><span>&#8198;&#8198;</span><input id="cancel-button" type="button" value="Cancel"></div></div>';
+  let insertedTemplate = `<div id="user-input-panel" class="obj2elem-div"><div><span class="input-description">Name:</span><input name="_name" id="_name"></div><div><span class="input-description">Value:</span><textarea name="_value" id="_value" placeholder="value or another JSON string" cols="50" rows="5"></textarea></div><div id="confirm-panel"><input id="add-button" type="button" value="Add"><input id="cancel-button" type="button" value="Cancel"></div></div>`;
 
   for (let i = 0; i < pluses.length; i++) {
     let plus = pluses[i];
@@ -79,35 +79,37 @@ function control_icon_handler(node) {
       addButton.addEventListener('click', function () {
         let prop = document.getElementById('_name').value;
         let val = document.getElementById('_value').value;
+        if (prop) {
+          let o;
+          try {
+            o = JSON.parse(val);
+          } catch (err) {
+            // nothing needed to do
+          }
 
-        let o;
-        try {
-          o = JSON.parse(val);
-        } catch (err) {
-          // nothing needed to do
-        }
+          if (!o) {
+            // if user input a value, ...
+            cNode.lastChild._pairedObject[prop] = val;
+          } else {
+            // if user input a JSON string, ...
+            cNode.lastChild._pairedObject[prop] = o;
+          }
 
-        if (!o) {
-          // if user input a value, ...
-          cNode.lastChild._pairedObject[prop] = val;
+          let obj = cNode.lastChild._pairedObject;
+          cNode.removeChild(cNode.lastChild);
+
+          updateNode(obj, cNode);
+          delete_input_panel();
+
+          let newNode = cNode.lastChild.lastChild;
+          newNode.classList.add('new-node-created');
+          newNode.scrollIntoView(false);
+          setTimeout(function () {
+            newNode.classList.remove('new-node-created');
+          }, 2000);
         } else {
-          // if user input a JSON string, ...
-          cNode.lastChild._pairedObject[prop] = o;
+          alert('A property name is required!');
         }
-
-        let obj = cNode.lastChild._pairedObject;
-        cNode.removeChild(cNode.lastChild);
-
-        updateNode(obj, cNode);
-        delete_input_panel();
-
-        let newNode = cNode.lastChild.lastChild;
-        newNode.classList.add('new-node-created');
-        newNode.scrollIntoView(false);
-        setTimeout(function () {
-          newNode.classList.remove('new-node-created');
-        }, 2000);
-
       });
     });
   }
@@ -152,7 +154,7 @@ function updateNode(obj, node) {
 
 // function for delete input-panel
 function delete_input_panel() {
-  let p = document.getElementById('input-panel');
+  let p = document.getElementById('user-input-panel');
   if (p !== null) {
     p.parentNode.remove(p);
   }
