@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: fixed;
 }
 #app-title {
     font-size: 36px;
@@ -16,26 +17,33 @@ body {
     margin-left: 20px;
     color: white;
 }
+#data-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.data-area-panel {
+    margin: 0 30px;
+    /*display: inline-block;*/
+}
 .sub-header-banner {
     width: 100%;
     height: 30px;
-    margin-bottom: 20px;
+    margin-top: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.data-area-panel {
-    margin: 10px 60px 10px 60px;
-    border: dotted 2px whitesmoke;
-}
-#left-panel {
-    width: 620px;
-}
-#right-panel {
-    min-width: 620px;
-}
+
+/*#left-panel {*/
+    /*width: 620px;*/
+/*}*/
+/*#right-panel {*/
+    /*min-width: 620px;*/
+/*}*/
 .input-view-div {
     padding: 10px;
+    border: dotted 2px whitesmoke;
 }
 #left-panel .sub-header-banner {
     background-color: #4CAF50;
@@ -43,11 +51,7 @@ body {
 #right-panel .sub-header-banner {
     background-color: darkorange;
 }
-#data-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+
 .sub-header-banner input {
     display: block;
     width: 80px;
@@ -55,6 +59,8 @@ body {
     border: transparent;
     border-radius: 6px;
     margin: auto;
+    background-color: yellow;
+    cursor: pointer;
 }
 
 .obj2elem-div {
@@ -89,7 +95,8 @@ body {
     margin-left: 20px;
     background-color: transparent;
     border: transparent;
-    width: 12em;
+    width: 6em;
+    height: 25px;
     overflow: visible;
     line-height: 16px;
     padding: 1px 5px;
@@ -157,8 +164,9 @@ textarea {
 
 #update-arrows {
     position: fixed;
-    margin-top: 300px;
-    width: 80px;
+    /*position: absolute;*/
+    top: 30%;
+    width: 60px;
 }
 #to-right {
     fill: green;
