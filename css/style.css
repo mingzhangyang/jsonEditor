@@ -35,13 +35,6 @@ body {
     flex-direction: row;
     align-items: center;
 }
-
-/*#left-panel {*/
-    /*width: 620px;*/
-/*}*/
-/*#right-panel {*/
-    /*min-width: 620px;*/
-/*}*/
 .input-view-div {
     padding: 10px;
     /*border: dotted 2px whitesmoke;*/
@@ -50,9 +43,13 @@ body {
 }
 #left-panel .sub-header-banner {
     background-color: #02bfe7;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
 }
 #right-panel .sub-header-banner {
     background-color: darkorange;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
 }
 
 .sub-header-banner input {
